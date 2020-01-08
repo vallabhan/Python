@@ -1,0 +1,54 @@
+1)a = int(input("enter the number: "))
+for i in range(1, a + 1):
+    if a % i == 0:
+        print(i)
+
+if i % 2 == 0:
+    print("The factor is Even")
+else:
+    print('The number is Odd')
+    
+    
+    
+    
+2)
+   L = input()
+    s=[L.split()]
+
+for s in s:
+  print(" ".join(sorted(list(set(s)))))
+
+
+3)items = []
+for i in range(1000, 3000):
+    s = str(i)
+    if (int(s[0])%2==0) and (int(s[1])%2==0) and (int(s[2])%2==0) and (int(s[2])%2==0):
+        items.append(s)
+print( ",".join(items))
+
+4)
+s=input("Input the string: ")
+d=l=0
+for c in s:
+    if c.isdigit():
+        d=d+1
+    elif c.isalpha():
+        l=l+1
+    else:
+        pass
+print("Letters",l)
+print("Digit",d)
+
+5)
+number= int(input("Enter the number: ")) #121
+reverse=0
+temp=number #121
+while(temp>0):
+    Reminder=temp%10 # reminder=1
+    reverse=(reverse*10)+Reminder # reverse=1
+    temp=temp//10 #12
+print("Reverse of the number is =%d" %reverse)
+if(number==reverse):
+    print("%d is a Palindrome Number" %number)
+else:
+    print("%d is not a Palindrome Number" %number)

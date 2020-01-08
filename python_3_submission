@@ -1,0 +1,28 @@
+import re 
+a= input('Enter the Reference ID')
+flag = 0
+while True:   
+    if (len(a)<12): 
+        flag = -1
+        break
+    elif not re.search("[a-z]", a): 
+        flag = -1
+        break
+    elif not re.search("[A-Z]", a): 
+        flag = -1
+        break
+    elif not re.search("[0-9]", a): 
+        flag = -1
+        break
+    elif not re.search("[_@$]", a): 
+        flag = -1
+        break
+    else: 
+        flag = 0
+        x=a.encode('base64','strict')
+        print(x) 
+       
+        break
+  
+if flag ==-1: 
+    print("Not a Valid Reference_Id") 
